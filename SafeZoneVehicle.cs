@@ -5,18 +5,18 @@ using UnityEngine;
 namespace Oxide.Plugins
 {
     [Info("SafeZoneVehicle", "RustFlash", "1.0.0")]
-    [Description("Disables damage for vehicles in safezones")]
+    [Description("Safezone settings for vehicles")]
 
     public class SafeZoneVehicle : RustPlugin
     {
         private bool disableDamageInSafezone = true;
-        private bool disableVehiclePushWithPassengerInSafezone = true; // New config option
+        private bool disableVehiclePushWithPassengerInSafezone = true;
         private const string pluginPermission = "safezonevehicle.use";
 
         protected override void LoadDefaultConfig()
         {
             Config["DisableDamageInSafezone"] = disableDamageInSafezone.ToString();
-            Config["DisableVehiclePushWithPassengerInSafezone"] = disableVehiclePushWithPassengerInSafezone.ToString(); // Initialize new option
+            Config["DisableVehiclePushWithPassengerInSafezone"] = disableVehiclePushWithPassengerInSafezone.ToString();
             SaveConfig();
         }
 
@@ -29,7 +29,7 @@ namespace Oxide.Plugins
         private void LoadConfigValues()
         {
             disableDamageInSafezone = Config.Get<bool>("DisableDamageInSafezone");
-            disableVehiclePushWithPassengerInSafezone = Config.Get<bool>("DisableVehiclePushWithPassengerInSafezone"); // Load new option
+            disableVehiclePushWithPassengerInSafezone = Config.Get<bool>("DisableVehiclePushWithPassengerInSafezone");
         }
 
         private void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo hitInfo)
@@ -59,7 +59,7 @@ namespace Oxide.Plugins
         {
             if (disableVehiclePushWithPassengerInSafezone && IsEntityInSafezone(vehicle) && vehicle.AnyMounted())
             {
-                return false; // Prevent vehicle push if someone is inside
+                return false;
             }
             return null;
         }
