@@ -15,11 +15,12 @@
 
 ## Description
 
-Mit **SafeZoneVehicle** werden, spezifische Sicherheitsregeln für Fahrzeuge innerhalb sicherer Zonen (Safezones) durchsetzt. Es sorgt dafür, dass Fahrzeuge und deren Passagiere in Safezones besser geschützt sind, indem es Schaden deaktiviert und bestimmte Interaktionen verhindert. Mit diesem Plugin können Sie Ihre Spieler schützen und verhindern das sie ärgerlich den Server verlassen weil sie mal wieder vom Recycler gepusht wurden oder gestorben sind wärend sie Recyclen. Außerdem bietet es weitere nützliche modifikationen.
+**SafeZoneVehicle** enforces specific safety rules for vehicles within safe zones. It ensures that vehicles and their passengers are better protected in safezones by disabling damage and preventing certain interactions. With this plugin you can protect your players and prevent them from annoyingly leaving the server because they were pushed by the recycler or died while recycling. It also offers other useful modifications. 
 
 ## Features:
-- **Fahrzeuge** nehmen in Safezones keinen Schaden mehr.
-- **Spieler** können Fahrzeuge mit Passagieren in Safezones nicht mehr schieben.
+- **Vehicles** no longer take damage in safezones.
+- **Players** can no longer push vehicles with passengers in safezones. 
+
 ## ToDo:
 - **Reparatur** Automatische Fahrzeug-Reparatur bei eintritt in die SafeZone
 - **Kraftstoff** Kein Kraftstoff verbrauch in SafeZonen
@@ -27,7 +28,7 @@ Mit **SafeZoneVehicle** werden, spezifische Sicherheitsregeln für Fahrzeuge inn
 
 - **Permission system:** It defines different permissions for different states such as sleeping, offline, death and unconsciousness.
 - **Inventory Protection:** It can lock or unlock a player's inventory containers (equipment, belt, main inventory) based on the player's state and permissions.
-- Loot Control:** It checks if a player is allowed to loot another player or their remains based on permissions.
+- **Loot Control:** It checks if a player is allowed to loot another player or their remains based on permissions.
 - **Event handling:** It reacts to various player events such as joining, disconnecting, falling asleep, waking up, being wounded, recovery and death.
 - **Admin override:** Administrators with a special permission can bypass the protection measures.
 
